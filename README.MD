@@ -3,12 +3,12 @@
 To start SparkSession locally with driver for postgres
 
 ```python
-spark = SparkSession.
-    builder.
-    appName("test").
-    config("spark.jars", "postgresql-42.4.0.jar").
-    master("local[*]").
-    getOrCreate()
+spark = SparkSession\
+        .builder\
+        .appName("test")\
+        .config("spark.jars", "postgresql-42.4.0.jar")\
+        .master("local[*]")\
+        .getOrCreate()
 ```
 
 Function to setup views for queries

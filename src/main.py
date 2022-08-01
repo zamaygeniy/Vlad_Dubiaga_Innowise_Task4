@@ -4,12 +4,12 @@ from src import utils
 import queries
 
 if __name__ == '__main__':
-    spark = SparkSession. \
-        builder. \
-        appName("test"). \
-        config("spark.jars", "postgresql-42.4.0.jar"). \
-        master("local[*]"). \
-        getOrCreate()
+    spark = SparkSession\
+        .builder\
+        .appName("test")\
+        .config("spark.jars", "postgresql-42.4.0.jar")\
+        .master("local[*]")\
+        .getOrCreate()
 
     password = input("input password to db: ")
     utils.setup_dataframes_with_postgres(password, spark)
